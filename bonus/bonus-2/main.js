@@ -1,6 +1,6 @@
 // Troviamo l'indice dell'elemento inserito senza usare .indexOf()
 
-var lista, cognomeUtente, indice;
+var lista, lista2 = [], cognomeUtente, indice;
 
 // creiamo la lista iniziale di cognomi
 lista = ["Longo", "Bruno", "Privitera", "Ventimiglia", "Alemanno", "Rossi"];
@@ -16,6 +16,15 @@ if (cognomeUtente[0] !== cognomeUtente[0].toUpperCase()) {
 
 // inseriamo il cognome inserito nella lista
 lista.push(cognomeUtente);
+
+//creiamo una copia del nostro array
+
+for (var i = 0; i < lista.length; i++) {
+  lista2.push(lista[i]);
+}
+
+console.log("Lista iniziale: " + lista);
+console.log("Lista copiata: " + lista2);
 
 // ordiniamo la lista senza usare sort
 var tmp;
