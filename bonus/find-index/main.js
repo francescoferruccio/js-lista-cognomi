@@ -17,10 +17,22 @@ if (cognomeUtente[0] !== cognomeUtente[0].toUpperCase()) {
 // inseriamo il cognome inserito nella lista
 lista.push(cognomeUtente);
 
-// ordiniamo la lista
-lista.sort();
-console.log("lista ordinata: " + lista);
+// ordiniamo la lista senza usare sort
+var tmp;
 
+console.log(lista);
+
+for (var i = 0; i < lista.length; i++) {
+  for (var j = i+1; j < lista.length; j++) {
+    if(lista[i] > lista[j]) {
+      tmp = lista[i];
+      lista[i] = lista[j];
+      lista[j] = tmp;
+      console.log("invertito " + lista[j] + " e " + lista[i]);
+    }
+  }
+  console.log(lista);
+}
 
 // troviamo l'indice dell'elemento inserito dall'utente
 for (var i = 0; i < lista.length; i++) {
